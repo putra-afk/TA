@@ -1,5 +1,6 @@
 <?php
-    include("connect.php");
+    include("../connect.php");
+    include("../header.php");
 
     $show = "SELECT * FROM penyewa";
     $result = mysqli_query($connect, $show);

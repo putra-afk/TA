@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("connect.php");
+include("../connect.php");
 
 $KTP_Penyewa = $_POST['KTP_Penyewa'];
 $No_Hp  = $_POST['No_Hp'];

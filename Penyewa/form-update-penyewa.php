@@ -1,5 +1,5 @@
 <?php
-include("connect.php");
+include("../connect.php");
 if (isset($_GET['KTP_Penyewa'])) {
 
     $KTP_Penyewa = $_GET['KTP_Penyewa'];
