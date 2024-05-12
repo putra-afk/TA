@@ -2,7 +2,7 @@
 include("../connect.php");
 include("../header.php");
 
-$show = "SELECT * FROM kos";
+$show = "SELECT * FROM Kos";
 $result = mysqli_query($connect, $show);
 
 ?>
@@ -17,27 +17,33 @@ $result = mysqli_query($connect, $show);
 <body>
     <table border="solid">
         <thead>
-            <h2 align="center">Data Kos</h2>
+
             <tr>
-                <th scope="col">No. Kamar</th>
+                <th colspan="4" align="center">Data Kos</th>
+            </tr>
+            <tr>
+                <th scope="col">No_Kamar</th>
                 <th scope="col">Alamat</th>
-                <th scope="col">Biaya Kos</th>
-                <th scope="col">Sistem Keamanan</th>
+                <th scope="col">Biaya_Kos</th>
+                <th scope="col">Sistem_Keamanan</th>
+                <th scope="col">Aksi</th> <!-- Kolom tambahan untuk tautan edit -->
             </tr>
         </thead>
-        <?php
-        $no = 1;
-        while ($data = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<th>" . $no. "</th>";
-            echo "<td>" . $data['No_Kamar']. "</td>";
-            echo "<td>" . $data['Alamat']. "</td>";
-            echo "<td>" . $data['Biaya Kos']. "</td>";
-            echo "<td>" . $data['Sistem Keamanan']. "</td>";
-            echo "</tr>";
-            $no++;
-        }
-        ?>
+        <tbody>
+            <?php
+            $no = 1;
+            while ($data = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo "<td>" . $no. "</td>"; // Menggunakan <td> untuk nomor baris
+                echo "<td>" . $data['Alamat']. "</td>";
+                echo "<td>" . $data['Biaya Kos']. "</td>";
+                echo "<td>" . $data['Sistem Keamanan']. "</td>";
+                echo "<td><a href='form-update-kos.php?No_Kamar=". $data['No_Kamar'] ."'>Edit</a></td>"; // Tautan edit dalam kolom aksi
+                echo "</tr>";
+                $no++;
+            }
+            ?>
+        </tbody>
     </table>
 </body>
 </html>

@@ -39,7 +39,7 @@ if (isset($_GET['KTP_Penyewa'])) {
 
 <body>
     <?php
-    include("connect.php");
+    include("../connect.php");
     if (isset($_GET['KTP_Penyewa'])) {
         $KTP_Penyewa = $_GET['KTP_Penyewa'];
         $query = "SELECT * FROM penyewa WHERE KTP_Penyewa = '$KTP_Penyewa'";
@@ -51,7 +51,7 @@ if (isset($_GET['KTP_Penyewa'])) {
     ?>
 
     <h2>Edit Penyewa</h2>
-    <form action="update.php" method="post">
+    <form action="update-penyewa.php" method="post">
         <table>
             <tr>
                 <td><label for="No_Hp">No Hp:</label></td>

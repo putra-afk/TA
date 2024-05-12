@@ -9,8 +9,8 @@
     <ul>
         <li><a href="../Penyewa/read-penyewa.php">Data Penyewa</a></li>
         <li><a href="../Kos/read-kos.php">Data Kos</a></li>
-        <li><a href="#">Fasilitas</a></li>
-        <li><a href="#">Order</a></li>
+        <li><a href="../Fasilitas/read-fasilitas.php">Fasilitas</a></li>
+        <li><a href="../Order_kos/read-order-kos.php">Order</a></li>
     </ul>
 </body>
 </html>

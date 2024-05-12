@@ -4,7 +4,7 @@ if (isset($_GET['No_Kamar'])) {
 
     $No_Kamar = $_GET['No_Kamar'];
 
-    $query = "SELECT * FROM kos WHERE No_Kamar = '$No_Kamar'";
+    $query = "SELECT * FROM Kos WHERE No_Kamar = '$No_Kamar'";
 
     $result = mysqli_query($connect, $query);
 
@@ -35,7 +35,7 @@ if (isset($_GET['No_Kamar'])) {
 </head>
 <body>
     <?php
-    include("connect.php");
+    include("../connect.php");
     if (isset($_GET['No_Kamar'])) {
         $No_Kamar = $_GET['No_Kamar'];
         $query = "SELECT * FROM kos WHERE No_Kamar = '$No_Kamar'";
@@ -47,7 +47,7 @@ if (isset($_GET['No_Kamar'])) {
     ?>
 
     <h2>Edit Kos</h2>
-    <form action="update.php" method="post">
+    <form action="update-kos.php" method="post">
         <table>
             <tr>
                 <td><label for="No_Kamar">No Kamar:</label></td>
